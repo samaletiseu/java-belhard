@@ -7,7 +7,7 @@ package by.belhard.j22.homeworks.hw_03.ht_03_09_Surprise;
 //
 //Хотелось бы видеть не менее 4 полей с различными типами, и не менее 3 методов с какой-то логикой.
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Moto {
 
@@ -17,9 +17,15 @@ public class Moto {
     private double fuel; //количество топлива в баке
     private double consumption; //расход на 100 км
 
+    public Moto(Type type, int year, double capacity, double fuel, double consumption) {
+        this.type = type;
+        this.year = year;
+        this.capacity = capacity;
+        this.fuel = fuel;
+        this.consumption = consumption;
+    }
 
-    public void measureCoolness(Type type) {
-
+    public void printCoolness(Type type) {
         if (type == Type.CRUISER) {
             System.out.println("Gog of the road!");
         } else if (type == Type.ENDURO) {
@@ -32,15 +38,14 @@ public class Moto {
     }
 
     int age = 0;
-//    int today = ; // как вывести текущую дату?
-
-//    public void calculateAge(int year) {
-//        age =
-
-//    }
+    public void calculateAge(int year) {
+        int curYear = LocalDate.now().getYear();
+        age = curYear - year;
+    }
 
     public void printAge() {
         System.out.print("Moto age = " + age);
+        System.out.println();
     }
 
     double distance = 0;

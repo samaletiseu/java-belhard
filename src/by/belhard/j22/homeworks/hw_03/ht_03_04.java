@@ -12,34 +12,27 @@ public class ht_03_04 {
     public static void main(String[] args) {
 
         double startSum = 1000;
-        double proc = 0.01;
+        double percent = 0.01;
         int years = 4;
         
         double currentSum = startSum;
         double tax = startSum * 0.01;
         double currentSumWithTax = startSum;
 
-
         for (int curYear = 1; curYear <= years ; curYear++) {
-
-            currentSum = currentSum + currentSum * proc;
+            currentSum = currentSum + currentSum * percent;
             currentSumWithTax = currentSum - tax;
         }
 
-////        alternative way
+// Alternative way (mine)
 //        int i = 1;
 //        while (i <= years) {
-//
 //            i++;
-//            currentSum = currentSum + currentSum * proc;
+//            currentSum = currentSum + currentSum * percent;
 //            currentSumWithTax = currentSum - tax;
 //        }
 
-        System.out.print("Balance after " + years + " years = ");
-        System.out.printf("%.3f", currentSum);
-        System.out.println();
-        System.out.print("Balance after " + years + " years with tax = ");
-        System.out.printf("%.3f", currentSumWithTax);
-
+        System.out.printf("Balance after " + years + " years = %.3f\n", currentSum);
+        System.out.printf("Balance after " + years + " years with tax = %.3f\n", currentSumWithTax);
     }
 }

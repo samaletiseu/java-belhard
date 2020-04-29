@@ -9,7 +9,6 @@ package by.belhard.j22.homeworks.hw_03.ht_03_08_Gamer;
 //доп1*) игрок должен хранить значение пройденного расстояния и уметь выводить на консоль это значение.
 
 public class Gamer {
-
     private int x;
     private int y;
 
@@ -22,18 +21,24 @@ public class Gamer {
 //        return x;
 //    }
 //
-//    public void setX(int newX) {
-//        this.recalculateTravelledDistance(newX, y);
-//        this.x = newX;
+//    public void setX(int x) {
+//        this.x = x;
 //    }
 //
 //    public int getY() {
 //        return y;
 //    }
 //
-//    public void setY(int newY) {
-//        this.recalculateTravelledDistance(x, newY);
-//        this.y = newY;
+//    public void setY(int y) {
+//        this.y = y;
+//    }
+//
+//    public double getDistance() {
+//        return distance;
+//    }
+//
+//    public void setDistance(double distance) {
+//        this.distance = distance;
 //    }
 
     public void printPosition() {
@@ -41,25 +46,21 @@ public class Gamer {
     }
 
     double distance = 0;
-
     public void setXY(int newX, int newY) {
-//        тут есть вопрос: чтобы помнить пройденное расстояние,
-//        сначала нужно его посчитать заранее при задании новых координат,
-//        а потом их засетать, иначе не работает вывод пройденного,
-//        это наверное можно вынести в отдельный метод внутри класса, но пока моск все :(
+//        double currentTravelledDistance = Math.sqrt((newX - x) * (newX - x) + (newY - y) * (newY - y));
+//        distance = distance + currentTravelledDistance;
 
-        double currentTravelledDistance = Math.sqrt((newX - x) * (newX - x) + (newY - y) * (newY - y));
-        distance = distance + currentTravelledDistance;
-
+        distance = distance + calculateDistance(newX, newY);
         this.x = newX;
         this.y = newY;
     }
 
+    private double calculateDistance(int newX, int newY) {
+        return Math.sqrt(Math.pow(newX - x, 2) + Math.pow(newY - y, 2));
+    }
+
     public void printTravelledDistance() {
-        System.out.print("Travelled distance = ");
-        System.out.printf("%.2f", distance);
-        // и тут вопрос: можно в одну строку уместить вывод стринги
-        // и значения с ограничением на количество знаков после запятой?
+        System.out.printf("Travelled distance = %.2f", distance);
         System.out.println();
     }
 }
