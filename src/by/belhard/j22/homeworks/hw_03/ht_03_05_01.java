@@ -5,22 +5,24 @@ package by.belhard.j22.homeworks.hw_03;
 public class ht_03_05_01 {
 
     public static void main(String[] args) {
+        for (int i = 0; i <= 100 ; i++) {
 
-        int[] array0 = new int[100];
-        int n = 0;
+// My way
+//            if (i%5 != 0) {
+//
+//            } else if (i%7 != 0) {
+//                System.out.print(i + " ");
+//            }
+//
+//            if (i%7 != 0) {
+//
+//            } else if (i%5 != 0) {
+//                System.out.print(i + " ");
+//            }
 
-        for (int i = 0; i < 100 ; i++) {
-            n++;
-
-            if (n%5 != 0) {
-
-            } else if (n%7 != 0) {
-                System.out.print(n + " ");
-            }
-
-            if (n%7 != 0) {
-            } else if (n%5 != 0) {
-                System.out.print(n + " ");
+// The best way - use XOR
+            if (i%5 == 0 ^ i%7 == 0) {
+                System.out.print(i + " ");
             }
         }
     }

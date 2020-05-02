@@ -12,22 +12,20 @@ public class ht_03_01 {
 
     public static void main(String[] args) {
 
-        int r = -5; // circle radius
-        double pi = 3.14159265;
+        int r = 10; // circle radius
+        double pi = 3.14159265; //pi можно задать, а можно использовать класс Math.PI
 
         if (r > 0) {
-
             // circle area
-            double s = (double) pi * r * r;
+            double s = pi * r * r;
+            double s1 = Math.PI * r * r; // class Math - standard library
+            System.out.printf("Circle area = %.4f\n", s);
 
             // circumference
-            double l = (double) 2 * pi * r;
-
-            System.out.println("circle area = " + s);
-            System.out.println("circumference = " + l);
+            double l = 2 * pi * r;
+            System.out.printf("Circumference = %.4f", l);
 
         } else {
-
             System.out.println("Invalid input!\nCircle radius cannot be negative.");
         }
     }
