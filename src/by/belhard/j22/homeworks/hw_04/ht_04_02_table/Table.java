@@ -61,8 +61,7 @@ public class Table {
 
         @Override
     public String toString() {
-        return "Table\n" +
-                "leg = " + leg +
+        return "\nleg = " + leg +
                 "\nheigh = " + heigh +
                 "\nmaterial = " + material +
                 "\ntype = " + type +
