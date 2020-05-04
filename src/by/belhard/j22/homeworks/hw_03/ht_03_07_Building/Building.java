@@ -9,7 +9,7 @@ public class Building {
 
     private Type type;
     private Address address;
-    private int floor;
+    private int floorsNumber;
     private boolean elevator;
     private Material material;
     private int year;
@@ -18,7 +18,7 @@ public class Building {
 
         this.type = type;
         this.address = address;
-        this.floor = floor;
+        this.floorsNumber = floor;
         this.elevator = elevator;
         this.material = material;
         this.year = year;
@@ -41,11 +41,11 @@ public class Building {
     }
 
     public int getFloor() {
-        return floor;
+        return floorsNumber;
     }
 
     public void setFloor(int floor) {
-        this.floor = floor;
+        this.floorsNumber = floor;
     }
 
     public boolean isElevator() {

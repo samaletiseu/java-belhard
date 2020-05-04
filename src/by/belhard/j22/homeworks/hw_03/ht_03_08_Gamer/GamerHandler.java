@@ -1,4 +1,4 @@
-package by.belhard.j22.homeworks.hw_03.ht_03_07_Gamer;
+package by.belhard.j22.homeworks.hw_03.ht_03_08_Gamer;
 
 //Создать класс Игрок.
 // Игрок имеет координаты x и y.
@@ -13,23 +13,31 @@ public class GamerHandler {
     public static void main(String[] args) {
 
         Gamer gamerRick = new Gamer(
-
                 0,
                 0
         );
 
-        System.out.println("Inicial x = " + gamerRick.getX() + "\nInicial y = " + gamerRick.getY());
+        gamerRick.printPosition();
+        gamerRick.printTravelledDistance();
 
-        gamerRick.setX(28);
-        gamerRick.setY(179);
+//        gamerRick.setX(5);
+//        gamerRick.printPosition();
+//        gamerRick.printTravelledDistance();
+//
+//        gamerRick.setY(10);
+//        gamerRick.printPosition();
+//        gamerRick.printTravelledDistance();
 
-        System.out.println("Current x = " + gamerRick.getX() + "\nCurrent y = " + gamerRick.getY());
+        gamerRick.setXY(3, 4);
+        gamerRick.printPosition();
+        gamerRick.printTravelledDistance();
 
+        gamerRick.setXY(6, 8);
+        gamerRick.printPosition();
+        gamerRick.printTravelledDistance();
 
-        double way = Math.sqrt(gamerRick.getX() * gamerRick.getX() + gamerRick.getY() * gamerRick.getY());
-
-        System.out.print("Way = ");
-        System.out.printf("%.2f", way);
-
+        gamerRick.setXY(12, 16);
+        gamerRick.printPosition();
+        gamerRick.printTravelledDistance();
     }
 }

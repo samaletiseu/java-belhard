@@ -5,24 +5,16 @@ package by.belhard.j22.homeworks.hw_03;
 public class ht_03_05_02 {
 
     public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
 
-        int[] array0 = new int[100];
-        int n = 0;
+// My way - long
+            if ((i >= 10 & i <= 19) | (i >= 30 & i <= 39) | (i >= 50 & i <= 59) | (i >= 70 & i <= 79) | (i >= 90 & i <= 99)) {
 
-        for (int i = 0; i < array0.length; i++) {
-            n++;
+// The best way - through decimal ranges
+//            if (i / 10 % 2 == 1) {
 
-            if ((i >= 9 & i < 19) | (i >= 29 & i < 39) | (i >= 49 & i < 59) | (i >= 69 & i < 79) | (i >= 89 & i < 99)) {
-
-                if (n % 5 != 0) {
-
-                } else if (n % 7 != 0) {
-                    System.out.print(n + " ");
-                }
-
-                if (n % 7 != 0) {
-                } else if (n % 5 != 0) {
-                    System.out.print(n + " ");
+                if (i%5 == 0 ^ i%7 == 0) {
+                System.out.print(i + " ");
                 }
             }
         }

@@ -5,20 +5,21 @@ package by.belhard.j22.homeworks.hw_03;
 public class ht_03_05 {
 
     public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 != 0) {
 
-        int[] array0 = new int[100];
-        int n = 0;
-
-        for (int i = 0; i < 100 ; i++) {
-            n++;
-
-            if (n%3 != 0) {
-
-            } else if (n%7 != 0) {
+            } else if (i % 7 != 0) {
 
             } else {
-                System.out.print(n + " ");
+                System.out.print(i + " ");
             }
+
+// The best way
+//        for (int i = 1; i <= 100 ; i++) {
+//            if (i%3 == 0 && i%7 == 0) {
+//                System.out.print(i + " ");
+//            }
+//        }
         }
     }
 }
