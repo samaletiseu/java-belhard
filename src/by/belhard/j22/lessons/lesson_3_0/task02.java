@@ -27,6 +27,8 @@ public class task02 {
 
         for (int i = 0; i <= 25 ; i++) {
             chars[i] = (char)(z - i);
+//            chars[i] = z;
+//            z--;
            }
         System.out.println(chars);
 

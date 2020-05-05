@@ -9,37 +9,54 @@ package by.belhard.j22.homeworks.hw_03.ht_03_08_Gamer;
 //доп1*) игрок должен хранить значение пройденного расстояния и уметь выводить на консоль это значение.
 
 public class Gamer {
+    String name;
     private int x;
     private int y;
 
-    public Gamer(int x, int y) {
+    public Gamer(int x, int y, String name, double distance) {
         this.x = x;
+        this.y = y;
+        this.name = name;
+        this.distance = distance;
+    }
+
+    public Gamer(int i, int i1) {
+    }
+
+    public Gamer(int i, int i1, String vasiliy) {
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
         this.y = y;
     }
 
-//    public int getX() {
-//        return x;
-//    }
-//
-//    public void setX(int x) {
-//        this.x = x;
-//    }
-//
-//    public int getY() {
-//        return y;
-//    }
-//
-//    public void setY(int y) {
-//        this.y = y;
-//    }
-//
-//    public double getDistance() {
-//        return distance;
-//    }
-//
-//    public void setDistance(double distance) {
-//        this.distance = distance;
-//    }
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public void printPosition() {
         System.out.println("Current x = " + this.x + "\nCurrent y = " + this.y);
@@ -53,6 +70,7 @@ public class Gamer {
         distance = distance + calculateDistance(newX, newY);
         this.x = newX;
         this.y = newY;
+
     }
 
     private double calculateDistance(int newX, int newY) {
