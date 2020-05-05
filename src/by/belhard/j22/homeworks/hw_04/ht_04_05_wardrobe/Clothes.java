@@ -4,7 +4,7 @@ package by.belhard.j22.homeworks.hw_04.ht_04_05_wardrobe;
 
 public class Clothes {
 
-    private String name;
+    private final String name;
 
     public Clothes(String name) {
         this.name = name;

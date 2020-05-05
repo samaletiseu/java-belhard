@@ -25,6 +25,15 @@ public class Wardrobe {
         this.shelves = shelves;
     }
 
+//    Another way
+    public Wardrobe(int numberOfShelves){
+      if (numberOfShelves <= 0) {
+          numberOfShelves = 3;
+      }
+        this.shelves = new Clothes[numberOfShelves];
+    }
+//
+
     @Override
     public String toString() {
         return "Wardrobe{" +
@@ -78,13 +87,21 @@ public class Wardrobe {
         return null;
     }
 
-    public void riviseClothes () {
+    public void reviseClothes () {
         for (int i = 0; i < shelves.length; i++) {
             if (shelves[i] != null) {
                 System.out.println(shelves[i]);
             } else {
                 System.out.println("Empty shelve");
             }
+// Можно так
+            System.out.printf("%d) %s\n",
+                    (i+1),
+                    shelves[i] != null ? shelves[i] : "empty");
         }
+    }
+// Валидация (засунуть ее везде где есть номер полки)
+    private boolean validateShelveNumber (int shelveNumber) {
+        return shelveNumber >= 0 && shelveNumber < shelves.length;
     }
 }

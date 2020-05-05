@@ -36,16 +36,16 @@ public class WardrobeHandler {
 
         Wardrobe myWirdrobe = new Wardrobe(clothesList);
 
-        myWirdrobe.riviseClothes();
+        myWirdrobe.reviseClothes();
 
         Clothes newCL = new Clothes("trousers");
         myWirdrobe.putClothesThingToGivenShelve(newCL, 8);
-        myWirdrobe.riviseClothes();
+        myWirdrobe.reviseClothes();
 
 
         Clothes randomCLSL = new Clothes("cat");
         myWirdrobe.dropClothesThingToAnyEmptyShelve(randomCLSL);
-        myWirdrobe.riviseClothes();
+        myWirdrobe.reviseClothes();
 
 
         myWirdrobe.getClothesThingFromGivenShelve(8);
