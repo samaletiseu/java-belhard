@@ -27,7 +27,7 @@ public class ht_03_03 {
 //        int raz = max - min;
 //
 //        System.out.println("Max salary = " + max);
-//        System.out.println("Main salary = " + min);
+//        System.out.println("MainAddress salary = " + min);
 //        System.out.println("Difference between MAX and MIN = " + raz);
 
 
@@ -36,7 +36,7 @@ public class ht_03_03 {
 //        min = Math.min(salary1, Math.min(salary2, salary3));
 //        int raz = max - min;
 //        System.out.println("Max salary = " + max);
-//        System.out.println("Main salary = " + min);
+//        System.out.println("MainAddress salary = " + min);
 //        System.out.println("Difference between MAX and MIN = " + raz);
 
 // My way
