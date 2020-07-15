@@ -9,23 +9,23 @@
  * Создать массив объектов типа Customer
 */
 
-package by.belhard.j23.homeworks.hw_03_Customer.part_1;
+package by.belhard.j23.homeworks.hw_03_Customer.part_2;
 
-public class Customer {
+public class CustomerWithAddress {
     private String name;
     private String surname;
     private int phone;
-    private String city;
-    private String street;
-    private int houseNumber;
+    private Address address;
 
-    public Customer(String name, String surname, int phone, String city, String street, int houseNumber) {
+    public CustomerWithAddress(String name, String surname, int phone, Address address) {
         this.name = name;
         this.surname = surname;
         this.phone = phone;
-        this.city = city;
-        this.street = street;
-        this.houseNumber = houseNumber;
+        this.address = address;
+    }
+
+    public Address printAddress() {
+        return address;
     }
 
     public void printFullName() {
@@ -36,7 +36,7 @@ public class Customer {
         System.out.println(phone);
     }
 
-    public void printFullAddress() {
-        System.out.println(city + " " + street + " " + houseNumber);
+    public void printClassAddress() {
+        System.out.println(address);
     }
 }

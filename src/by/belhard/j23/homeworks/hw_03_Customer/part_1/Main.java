@@ -29,19 +29,19 @@ public class Main {
                 11
         );
 
-        customerOne.getFullName();
-        customerOne.getPhone();
-        customerOne.getFullAddress();
+        customerOne.printFullName();
+        customerOne.printPhone();
+        customerOne.printFullAddress();
         System.out.println();
 
-        customerTwo.getFullName();
-        customerTwo.getPhone();
-        customerTwo.getFullAddress();
+        customerTwo.printFullName();
+        customerTwo.printPhone();
+        customerTwo.printFullAddress();
         System.out.println();
 
-        customerThree.getFullName();
-        customerThree.getPhone();
-        customerThree.getFullAddress();
+        customerThree.printFullName();
+        customerThree.printPhone();
+        customerThree.printFullAddress();
         System.out.println();
 
         Customer[] customerScope = new Customer[8];
